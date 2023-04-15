@@ -11,16 +11,16 @@
               <p>bye</p>
               <p>HELLO</p>
               <p>HELLO</p>
-              <p class="animated__animated animated__bounce">HELLO</p>
+              <p class="animate__animated animate__bounce">HELLO</p>
             </div>
           </Transition>
           <Transition 
             appear 
             enter-from-class="" 
-            enter-active-class="animated__animated animated__bounce" 
+            enter-active-class="animate__animated animate__bounce" 
             enter-to-class="" 
             leave-class="" 
-            leave-active-class="animated__animated animated__shakeX" 
+            leave-active-class="animate__animated animate__shakeX" 
             leave-to-class=""
             >
             <p v-if="show">hello</p>
@@ -32,6 +32,7 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+import './assets/animate.css/animate.min.css'
 
 export default {
   name: 'App',
@@ -57,7 +58,7 @@ methods: {
 }
 .fade-enter-active {
   /* 現れるときのトランジションの状態 */
-  transition: opacity 0.5s;
+  transition: opacity 5s;
 }
 .fade-enter-to {
   /* 現れるときの最後の状態 */
@@ -69,7 +70,7 @@ methods: {
 }
 .fade-leave-active {
   /* 消えるときのトランジションの状態 */
-  transition: opacity 0.5s;
+  transition: opacity 5s;
 }
 .fade-leave-to {
   /* 消えるときの最後の状態 */
@@ -80,7 +81,7 @@ methods: {
   opacity: 0;
 }
 .slide-enter-active {
-  animation: slide-in 0.5s;
+  animation: slide-in 5s;
   transition: opacity 1s;
 }
 .slide-enter-to {
@@ -90,7 +91,7 @@ methods: {
   opacity: 1;
 }
 .slide-leave-active {
-  animation: slide-in 0.5s reverse;
+  animation: slide-in 5s reverse;
   transition: opacity 1s;
 }
 .slide-leave-to {
